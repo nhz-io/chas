@@ -1,5 +1,9 @@
-# Channel API Server
-## [![Build Status][travis-image]][travis-url]
+# chas
+
+Channel API Server
+
+[![Build Status][travis-image]][travis-url]
+
 [![NPM][npm-image]][npm-url]
 
 [travis-image]: https://travis-ci.org/nhz-io/chas.svg
