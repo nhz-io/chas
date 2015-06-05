@@ -9,6 +9,7 @@ Channel API Server
 ## Classes
 
 ### [Resource][resource.coffee-url]
+Dummy resource for services.
 
 ### [Channel][channel.coffee-url]
 Communication channel class. Extends [EventEmitter][events.EventEmitter-url]
@@ -44,13 +45,21 @@ if the event argument is `'data'` or call the `super` method otherwise
 
 #### Events
 * data
-  * The listener will receive the message coming from the other end of the channel.  
-    The message can be either `String`, `Object` or `Array`.  
+  * The listener will receive the message coming from the other end of the channel.
+    The message can be either `String`, `Object` or `Array`.
     The channel is originally intended to transfer JSON object.
 
 ### [Service][service.coffee-url]
+Receives messages coming from the `channel`. Message must be an object with:
+* id
+* params
+* resource
+* action
 
 ### [Server][server.coffee-url]
+Extends [Sever][net.Server-url]. Automatically creates a `channel` upon new connection
+and emits `channel` event. Automatically closes the `channel` when `socket` ends.
+
 
 [travis-image]: https://travis-ci.org/nhz-io/chas.svg
 [travis-url]: https://travis-ci.org/nhz-io/chas
