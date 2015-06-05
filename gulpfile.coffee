@@ -30,7 +30,7 @@ $.gulp.task 'build', [ 'clean', 'lint'], ->
 $.gulp.task 'test', [ 'build' ], ->
   $.gulp
     .src [ "#{_.test}/**/*.js" ], read: false
-    .pipe $.test reporter: 'tap'
+    .pipe $.test reporter: 'dot'
 
 $.gulp.task 'dist', [ 'build', 'test' ], ->
   $.gulp
