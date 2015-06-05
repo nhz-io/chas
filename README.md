@@ -44,9 +44,9 @@ if the event argument is `'data'` or call the `super` method otherwise
 
 #### Events
 * data
-  * The listener will receive the message coming from the other end of the channel
-    the message can be either `String`, `Object` or `Array`. The channel is originally
-    intended to transfer JSON object.
+  * The listener will receive the message coming from the other end of the channel.  
+    The message can be either `String`, `Object` or `Array`.  
+    The channel is originally intended to transfer JSON object.
 
 ### [Service][service.coffee-url]
 
