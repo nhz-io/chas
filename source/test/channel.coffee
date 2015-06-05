@@ -9,6 +9,9 @@ describe 'Channel', ->
 
   it 'should transmit the message', (done) ->
     server = new net.createServer (connection) ->
-      (new Channel socket:connection).on 'data', (message) -> if message?.test then done()
+      (new Channel socket:connection).on 'data', (message) ->
+        if message?.test then done()
+        server.close()
+        channel.close()
     server.listen()
-    (new Channel socket:net.createConnection port: server.address().port).write test:true
+    (channel = new Channel socket:net.createConnection port: server.address().port).write test:true
