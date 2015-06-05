@@ -20,16 +20,16 @@ Communication channel class. Extends [EventEmitter][events.EventEmitter-url]
 
 #### Methods
 * constructor({socket:[Socket][net.Socket-url]})
-    Will throw an error if no `socket` provided
+  * Will throw an error if no `socket` provided
 
 * read()
-    Returns the data waiting on the [join stream][split-join-url]
+  * Returns the data waiting on the [join stream][split-join-url]
 
 * write(message)
-    Writes the message into the [split stream][split-join-url]
+  * Writes the message into the [split stream][split-join-url]
 
 * close()
-    Closes the `streams` and ends the `socket`
+  * Closes the `streams` and ends the `socket`
 
 #### Extended methods
 * [once][once-url](event, callback)
